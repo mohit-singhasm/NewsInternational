@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import loading from './loading.gif'
 
 export class spinner extends Component {
