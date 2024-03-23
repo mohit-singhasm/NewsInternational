@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
 const NewsItem = (props) => {
     let { title, description, imgUrl, newsUrl, author, date,source } = props
@@ -19,3 +19,13 @@ const NewsItem = (props) => {
 }
 
 export default NewsItem
+
+NewsItem.propTypes = {
+  title : PropTypes.string,
+  description : PropTypes.string, 
+  imgUrl: PropTypes.string,
+  newsUrl: PropTypes.string,
+  author: PropTypes.string,
+  date: PropTypes.string,
+  source: PropTypes.string, 
+}

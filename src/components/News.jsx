@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import NewsItem from './NewsItem'
 import Spinner from './spinner'
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
-import done from "./done.gif"
+import done from "../assets/done.gif"
 
 const News = (props) => {
 
@@ -62,7 +62,7 @@ const News = (props) => {
         <div className="container">
           <div className="row d-flex flex-wrap justify-content-center">
             {articles.map((element) => {
-              return <div className="col md-4" key={element.url}>
+              return <div className="col md-4" key={element.url + Date.now()}>
                 <NewsItem title={element.title} description={element.description} imgUrl={element.urlToImage ? element.urlToImage : "https://www.gannett-cdn.com/presto/2023/06/28/USAT/1ae86d68-7784-451b-b6a2-aa8558ba0e97-AP23178343313246.jpg?auto=webp&crop=2080,1170,x0,y372&format=pjpg&width=1200"} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
               </div>
             })}
@@ -85,7 +85,7 @@ News.propTypes = {
   pageSize: PropTypes.number,
   category: PropTypes.string,
   apiKey: PropTypes.string,
-  // setProgress:PropTypes.number
+  setProgress:PropTypes.func
 }
 
 
