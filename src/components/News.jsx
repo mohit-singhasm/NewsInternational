@@ -57,7 +57,7 @@ const News = (props) => {
         loader={<Spinner />}
         next={fetchMoreData}
         hasMore={articles.length !== totalResults}
-        endMessage={<img src={done} alt="Ends Here" width={1220} height={500} />}
+        endMessage={<img src={done} alt="Ends Here" width={1220} height={600} />}
       >
         <div className="container">
           <div className="row d-flex flex-wrap justify-content-center">
