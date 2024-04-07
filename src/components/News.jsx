@@ -53,10 +53,10 @@ const News = (props) => {
       {loading && <Spinner />}
       <hr />
       <InfiniteScroll
-        dataLength={articles.length}
+        dataLength={articles?.length}
         loader={<Spinner />}
         next={fetchMoreData}
-        hasMore={articles.length !== totalResults}
+        hasMore={articles?.length !== totalResults}
         endMessage={<img src={done} alt="Ends Here" width={1220} height={600} />}
       >
         <div className="container">
