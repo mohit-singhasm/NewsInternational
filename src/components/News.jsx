@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import NewsItem from './NewsItem'
-import Spinner from './spinner'
+import Spinner from './Spinner.jsx'
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
 import done from "../assets/done.gif"
